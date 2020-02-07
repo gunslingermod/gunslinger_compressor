@@ -1,0 +1,1 @@
+FileListCreator.exe -d packed -o guns.list -l https://raw.githubusercontent.com/gunslingermod/mod_data/master/patches/
