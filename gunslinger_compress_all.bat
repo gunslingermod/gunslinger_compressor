@@ -205,11 +205,18 @@ move gamedata.pack_#0 packed\guns_data_textures_wpn_wpn_pr.db
 rem 22 - weapons textures wpn_S-wpn_S
 rmdir /s /q gamedata\
 mkdir gamedata
-for %%i in (s) do xcopy "%GUNS_PATH%\gamedata\textures\wpn\wpn_%%i*" "gamedata\textures\wpn\"
+for %%i in (a,b,c,d,e,f,g,h,i,j,k,l,m) do xcopy "%GUNS_PATH%\gamedata\textures\wpn\wpn_s%%i*" "gamedata\textures\wpn\"
 xrCompress.exe gamedata -ltx build.ltx -store
-move gamedata.pack_#0 packed\guns_data_textures_wpn_wpn_ss.db
+move gamedata.pack_#0 packed\guns_data_textures_wpn_wpn_ss1.db
 
-rem 23 - weapons textures wpn_T-wpn_Z
+rem 23 - weapons textures wpn_S-wpn_S
+rmdir /s /q gamedata\
+mkdir gamedata
+for %%i in (n,o,p,q,r,s,t,u,v,w,x,y,z) do xcopy "%GUNS_PATH%\gamedata\textures\wpn\wpn_s%%i*" "gamedata\textures\wpn\"
+xrCompress.exe gamedata -ltx build.ltx -store
+move gamedata.pack_#0 packed\guns_data_textures_wpn_wpn_ss2.db
+
+rem 24 - weapons textures wpn_T-wpn_Z
 rmdir /s /q gamedata\
 mkdir gamedata
 for %%i in (t,u,v,w,x,y,z) do xcopy "%GUNS_PATH%\gamedata\textures\wpn\wpn_%%i*" "gamedata\textures\wpn\"
