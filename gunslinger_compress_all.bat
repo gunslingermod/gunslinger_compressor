@@ -12,9 +12,8 @@ mkdir gamedata
 robocopy  %GUNS_PATH%\gamedata\configs gamedata\configs /MIR 
 robocopy  %GUNS_PATH%\gamedata\scripts gamedata\scripts /MIR
 robocopy  %GUNS_PATH%\gamedata\shaders gamedata\shaders /MIR
-@echo function GetBuildStamp() > gamedata\scripts\gunsl_build_stamp.script 
-@echo return "%DATE%" >> gamedata\scripts\gunsl_build_stamp.script 
-@echo end >> gamedata\scripts\gunsl_build_stamp.script 
+@echo [gunslinger_version] > gamedata\configs\gunslinger_version.ltx
+@echo version = "%DATE%" >> gamedata\configs\gunslinger_version.ltx
 xrCompress.exe gamedata -ltx build.ltx -store
 move gamedata.pack_#0 packed\guns_data_plaintext.db
 
