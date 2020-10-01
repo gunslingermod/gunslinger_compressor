@@ -228,6 +228,8 @@ del engine.log
 
 calc_guns_md5.bat
 
+makecabs.bat
+
 echo FINISHED!
 
 rem pause
