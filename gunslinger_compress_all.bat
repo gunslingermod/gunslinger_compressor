@@ -226,9 +226,9 @@ rmdir /s /q gamedata\
 del log.txt
 del engine.log
 
-calc_guns_md5.bat
+call calc_guns_md5.bat
 
-makecabs.bat
+call makecabs.bat
 
 echo FINISHED!
 
