@@ -110,6 +110,8 @@ move gamedata.pack_#0 packed\guns_data_hands.db
 rem 12 - common textures (without act and wpn)
 rmdir /s /q gamedata\
 mkdir gamedata
+mkdir gamedata\textures
+xcopy "%GUNS_PATH%\gamedata\textures" "gamedata\textures"
 for /d %%a in (%GUNS_PATH%\gamedata\textures\*) do call :ProcessCommonTex %%~na
 goto EndProcessCommonTex
 :ProcessCommonTex
